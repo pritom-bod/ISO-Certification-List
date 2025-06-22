@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ISO Certification List</title>
+    <link rel="stylesheet" href="{% static 'Scrape_list/style.css' %}">
+    
+</head>
+<body>
+    <h1>ISO Certification Project List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ISO Code</th>
+                <th>Project Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cert in certs %}
+            <tr>
+                <td>{{ cert.ISO_Code }}</td>
+                <td>{{ cert.Title }}</td>
+                <td><a href="{% url 'iso_detail_json' cert.Slug %}" class="btn" target="_blank">View JSON</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
