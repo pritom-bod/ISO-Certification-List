@@ -12,3 +12,38 @@ body { font-family: Arial, sans-serif; background: #f9f9f9; padding: 30px; }
             border-radius: 4px;
         }
         .btn:hover { background-color: #219150; }
+
+.fancy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #660096, #ff00c8);
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 8px 15px rgba(30, 150, 0, 0.4);
+  transition: all 0.3s ease;
+  user-select: none;
+  cursor: pointer;
+  border: none;
+}
+
+.fancy-btn .icon {
+  font-size: 22px;
+  display: inline-block;
+  transform: translateY(1px);
+}
+
+.fancy-btn:hover {
+  background: linear-gradient(135deg, #ff0077, #460096);
+  box-shadow: 0 12px 20px rgba(30, 150, 0, 0.6);
+  color: #222;
+}
+
+.fancy-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 6px 10px rgba(30, 150, 0, 0.3);
+}
